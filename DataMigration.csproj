@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <Deterministic>false</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="lib\**" />
+    <EmbeddedResource Remove="lib\**" />
+    <None Remove="lib\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="model.xml~RF8ff9aa.TMP" />
+    <None Remove="Program.cs~RF124111a.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NewLife.WinCore" Version="9.0.2022.304" />
+    <PackageReference Include="NewLife.XCode" Version="11.0.2022.319-beta1339" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.50" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddDataBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
